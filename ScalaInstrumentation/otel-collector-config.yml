@@ -1,0 +1,36 @@
+# /tmp/otel-collector-config.yaml
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+exporters:
+  file:
+    path: /otel-data/telemetry.json
+    rotation:
+      max_megabytes: 10
+      max_days: 1
+      max_backups: 5
+  debug:
+    verbosity: detailed
+
+processors:
+  batch:
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      exporters: [debug, file]
+      processors: [batch]
+    metrics:
+      receivers: [otlp]
+      exporters: [debug, file]
+      processors: [batch]
+    logs:
+      receivers: [otlp]
+      exporters: [debug, file]
+      processors: [batch]
