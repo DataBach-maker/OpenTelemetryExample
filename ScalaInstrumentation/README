@@ -3,6 +3,7 @@ A sample application demonstrating custom OpenTelemetry tracing integration with
 
 ## What This Does
 The application creates a simple Spark DataFrame, counts its rows, and traces the entire process using custom OpenTelemetry spans. Perfect for learning how to integrate observability into Spark applications.
+The traces are exported to a directory called otel-data into a file named telemetry.json.
 
 ## Prerequisites
 # Required Tools
