@@ -23,7 +23,8 @@ If you're behind a corporate firewall, you may need to configure proxy settings 
 
 * Clone the repository
 * Start the application:
-* bashdocker-compose up --build
+* docker-compose logs otel-collector
+* docker-compose up
 
 
 ## Platform Compatibility

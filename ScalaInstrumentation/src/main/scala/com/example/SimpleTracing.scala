@@ -1,12 +1,12 @@
 package com.example
 
 import io.opentelemetry.api.GlobalOpenTelemetry
-import io.opentelemetry.api.trace.{Span, StatusCode}
-import org.apache.spark.sql.{SparkSession, DataFrame}
+import io.opentelemetry.api.trace.StatusCode
+import org.apache.spark.sql.{DataFrame, SparkSession}
 
 object SimpleTracing {
 
-  private val tracer = GlobalOpenTelemetry.getTracer("spark-app")
+  private val tracer = GlobalOpenTelemetry.getTracer("SimpleTracingApp")
 
   // Initialize Spark session
   private val spark = SparkSession.builder()
