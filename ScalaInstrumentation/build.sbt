@@ -6,7 +6,7 @@ val sparkVersion = "3.5.0"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "simple-tracing",
+    name := "example-use-case-name",
     version := "0.1.0-SNAPSHOT",
 
     // Explicitly set main class

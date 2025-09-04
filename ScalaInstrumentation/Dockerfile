@@ -22,8 +22,8 @@ RUN wget -O /opt/opentelemetry-javaagent.jar \
 
 
 # Set OpenTelemetry environment variables
-ENV OTEL_SERVICE_NAME=simple-tracing
-ENV OTEL_RESOURCE_ATTRIBUTES=service.name=simple-tracing,service.version=1.0.0
+ENV OTEL_SERVICE_NAME=main
+ENV OTEL_RESOURCE_ATTRIBUTES=service.name=main,service.version=1.0.0
 ENV OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4317
 ENV OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
 ENV OTEL_TRACES_EXPORTER=otlp

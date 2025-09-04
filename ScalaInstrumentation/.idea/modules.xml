@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ScalaInstrumentation/simple-tracing.iml" filepath="$PROJECT_DIR$/.idea/modules/ScalaInstrumentation/simple-tracing.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ScalaInstrumentation/simple-tracing.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ScalaInstrumentation/simple-tracing.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ScalaInstrumentation/simple-tracing.simple-tracing-build.iml" filepath="$PROJECT_DIR$/.idea/modules/ScalaInstrumentation/simple-tracing.simple-tracing-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ScalaInstrumentation/simple-tracing.test.iml" filepath="$PROJECT_DIR$/.idea/modules/ScalaInstrumentation/simple-tracing.test.iml" />
     </modules>
   </component>
 </project>

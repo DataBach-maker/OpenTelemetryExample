@@ -1,7 +1,7 @@
 
 services:
   # Your dice game application
-  simple-tracing:
+  main:
     build: .
     environment:
       - OTEL_EXPORTER_OTLP_ENDPOINT=http://otel-collector:4318

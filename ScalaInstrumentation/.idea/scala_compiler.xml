@@ -2,6 +2,6 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <option name="separateProdTestSources" value="true" />
-    <profile name="sbt 1" modules="dice-game,dice-game.main,dice-game.test,scalainstrumentation,scalainstrumentation.main,scalainstrumentation.test,scalainstrumentation_964,scalainstrumentation_964.main,scalainstrumentation_964.test" />
+    <profile name="sbt 1" modules="dice-game,dice-game.main,dice-game.test,scalainstrumentation,scalainstrumentation.main,scalainstrumentation.test,scalainstrumentation_964,scalainstrumentation_964.main,scalainstrumentation_964.test,simple-tracing,simple-tracing.main,simple-tracing.test" />
   </component>
 </project>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="root:main [file:/C:/Users/arian/Development/LocalExperimentsAttentionNotBackedUp/ScalaInstrumentation/]" external.linked.project.path="$MODULE_DIR$/../../.." external.root.project.path="$MODULE_DIR$/../../.." external.system.id="SBT" external.system.module.type="sbtSourceSet" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="root:main [file:/C:/Users/arian/Development/OpenTelemetryExample/ScalaInstrumentation/]" external.linked.project.path="$MODULE_DIR$/../../.." external.root.project.path="$MODULE_DIR$/../../.." external.system.id="SBT" external.system.module.type="sbtSourceSet" type="JAVA_MODULE" version="4">
   <component name="DisplayModuleName">
-    <option name="name" value="dice-game.main" />
+    <option name="name" value="simple-tracing.main" />
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17">
     <output url="file://$MODULE_DIR$/../../../target/scala-2.13/classes" />
