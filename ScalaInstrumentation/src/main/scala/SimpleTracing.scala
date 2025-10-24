@@ -52,38 +52,23 @@ object SimpleTracing {
       span.setAttribute("spark.job.id", jobStart.jobId)
       span.setAttribute("spark.job.submission_time", jobStart.time)
       span.setAttribute("spark.job.stage_count", jobStart.stageIds.length)
-
       // Console output for immediate visibility during development
-      println(s"🚀 JOB STARTED! Job ID: ${jobStart.jobId} at time: ${jobStart.time}")
+      println(s" JOB STARTED! Job ID: ${jobStart.jobId} at time: ${jobStart.time}")
     }
   }
 
-  /**
-   * Spark session configured for local execution.
-   *
-   * Configuration Notes:
-   * - master("local[*]"): Uses all available CPU cores on local machine
-   * - For production: use cluster managers like YARN, Kubernetes, or Spark Standalone
-   * - Session is singleton pattern - reuse across operations for efficiency
-   */
-  private val spark = SparkSession.builder()
-    .appName("SimpleTracingApp")
-    .master("local[*]")
-    .getOrCreate()
-
-  import spark.implicits._
 
   /**
    * Demonstrates DataFrame operations with integrated tracing and monitoring.
    *
-   * Tracing Strategy:
    * 1. Create span before any Spark operations begin
    * 2. Register listener to capture automatic Spark events
    * 3. Add manual events for business logic milestones
    * 4. Include custom attributes for operational metrics
    * 5. Ensure proper span lifecycle management (start -> end)
    */
-  def createAndCountDataFrame(): Unit = {
+  def createAndCountDataFrame(): Unit = SparkSessionProvider.withSession { spark =>
+    import spark.implicits._
     // Create trace span to track the entire DataFrame operation
     val span = tracer.spanBuilder("spark-dataframe-processing").startSpan()
 
@@ -150,46 +135,6 @@ object SimpleTracing {
    */
   def main(args: Array[String]): Unit = {
     println("Processing Spark DataFrame with OpenTelemetry tracing...")
-
-    try {
-      createAndCountDataFrame()
-    } finally {
-      // Essential cleanup: prevents resource leaks and hanging processes
-      spark.stop()
-    }
+    createAndCountDataFrame()
   }
 }
-
-/*
- * LEARNING NOTES - Spark Listeners and OpenTelemetry Integration
- *
- * 1. SPARK LISTENERS ARCHITECTURE:
- *    - Event-driven system for monitoring Spark applications
- *    - Extends SparkListener abstract class and override specific event methods
- *    - Registered with SparkContext.addSparkListener()
- *    - Runs asynchronously to avoid impacting Spark performance
- *
- * 2. OPENTELEMETRY CONCEPTS:
- *    - Span: Represents a single operation in a trace (has start/end times)
- *    - Trace: Collection of spans representing a complete request flow
- *    - Attributes: Key-value metadata attached to spans for filtering/analysis
- *    - Events: Timestamped log entries within a span's lifecycle
- *
- * 3. INTEGRATION PATTERNS:
- *    - Manual Instrumentation: Explicitly create spans around business operations
- *    - Automatic Instrumentation: Use agents/libraries to capture framework events
- *    - Hybrid Approach: Combine both for comprehensive observability
- *
- * 4. BEST PRACTICES:
- *    - Always end spans to prevent memory leaks
- *    - Use structured attributes instead of string concatenation in event names
- *    - Register listeners before triggering operations they should monitor
- *    - Include business-relevant metrics alongside technical metrics
- *    - Use consistent naming conventions for spans and attributes
- *
- * 5. PRODUCTION CONSIDERATIONS:
- *    - Listener overhead: Keep processing lightweight to avoid performance impact
- *    - Sampling: Use trace sampling to control data volume in high-throughput systems
- *    - Error handling: Ensure listener failures don't crash Spark applications
- *    - Security: Avoid logging sensitive data in span attributes or events
- */
