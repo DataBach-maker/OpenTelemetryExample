@@ -1,18 +1,18 @@
-package com.example.spark
+package com.example
 
 import com.example.config.SparkSessionProvider
+import com.example.listener.SparkListenerManager
 import com.example.service.{EmployeeDataService, TracingService}
-import com.example.spark.listener.SparkListenerManager
 
-object DataFrameProcessor {
+object Job {
 
-  def processEmployeeData(): Unit = SparkSessionProvider.withSession { spark =>
-    val tracingService = new TracingService("DataFrameProcessor")
+  def process(): Unit = SparkSessionProvider.withSession { spark =>
+    val tracingService = new TracingService("Job")
     val dataService = new EmployeeDataService(spark)
-    val listenerManager = new SparkListenerManager(spark)  // Add this
+    val listenerManager = new SparkListenerManager(spark)
 
     tracingService.traceOperation("spark-dataframe-processing") { span =>
-      listenerManager.registerJobListener(span)  // Add this
+      listenerManager.registerJobListener(span)
 
       val employeesDF = dataService.createEmployeeDataFrame()
       val metrics = DataFrameMetrics.calculate(employeesDF)

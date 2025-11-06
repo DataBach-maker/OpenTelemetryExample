@@ -1,6 +1,6 @@
 [debug] [zinc] IncrementalCompile -----------
 [debug] IncrementalCompile.incrementalCompile
-[debug] previous = Stamps for: 4 products, 1 sources, 7 libraries
-[debug] current source = Set(${BASE}/src/main/scala/SimpleTracing.scala)
+[debug] previous = Stamps for: 13 products, 8 sources, 7 libraries
+[debug] current source = Set(${BASE}/src/main/scala/com/example/service/TracingService.scala, ${BASE}/src/main/scala/com/example/service/EmployeeDataService.scala, ${BASE}/src/main/scala/com/example/listener/SparkListenerManager.scala, ${BASE}/src/main/scala/com/example/listener/JobStartListener.scala, ${BASE}/src/main/scala/com/example/Job.scala, ${BASE}/src/main/scala/com/example/DataFrameMetrics.scala, ${BASE}/src/main/scala/com/example/config/SparkSessionProvider.scala, ${BASE}/src/main/scala/com/example/Main.scala)
 [debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())
 [debug] No changes

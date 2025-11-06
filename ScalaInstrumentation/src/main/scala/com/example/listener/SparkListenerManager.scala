@@ -1,4 +1,4 @@
-package com.example.spark.listener
+package com.example.listener
 
 import io.opentelemetry.api.trace.Span
 import org.apache.spark.sql.SparkSession

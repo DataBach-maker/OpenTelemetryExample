@@ -1,4 +1,4 @@
-package com.example.spark
+package com.example
 
 import org.apache.spark.sql.DataFrame
 
