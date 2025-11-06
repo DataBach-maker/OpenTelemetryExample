@@ -1,7 +1,7 @@
 package com.example.service
 
 import org.apache.spark.sql.{DataFrame, SparkSession}
-import com.example.spark.DataFrameMetrics
+import com.example.DataFrameMetrics
 
 class EmployeeDataService(spark: SparkSession) {
   import spark.implicits._

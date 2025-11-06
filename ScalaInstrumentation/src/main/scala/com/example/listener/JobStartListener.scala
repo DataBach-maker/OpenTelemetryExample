@@ -1,4 +1,4 @@
-package com.example.spark.listener
+package com.example.listener
 
 import io.opentelemetry.api.trace.Span
 import org.apache.spark.scheduler.{SparkListener, SparkListenerJobStart}
@@ -26,6 +26,5 @@ class JobStartListener(span: Span) extends SparkListener {
     span.setAttribute("spark.job.submission_time", jobStart.time)
     span.setAttribute("spark.job.stage_count", jobStart.stageIds.length)
 
-    println(s"JOB STARTED! Job ID: ${jobStart.jobId} at time: ${jobStart.time}")
   }
 }

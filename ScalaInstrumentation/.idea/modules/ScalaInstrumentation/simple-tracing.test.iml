@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="root:test [file:/C:/Users/arian/Development/LocalExperimentsAttentionNotBackedUp/ScalaInstrumentation/]" external.linked.project.path="$MODULE_DIR$/../../.." external.root.project.path="$MODULE_DIR$/../../.." external.system.id="SBT" external.system.module.type="sbtSourceSet" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="root:test [file:/C:/Users/arian/Development/OpenTelemetryExample/ScalaInstrumentation/]" external.linked.project.path="$MODULE_DIR$/../../.." external.root.project.path="$MODULE_DIR$/../../.." external.system.id="SBT" external.system.module.type="sbtSourceSet" type="JAVA_MODULE" version="4">
   <component name="DisplayModuleName">
-    <option name="name" value="dice-game.test" />
+    <option name="name" value="simple-tracing.test" />
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17">
     <output-test url="file://$MODULE_DIR$/../../../target/scala-2.13/test-classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../src/test" />
+    <content url="file://$MODULE_DIR$/../../../src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../src/test/scala" isTestSource="true" />
+    </content>
     <content url="file://$MODULE_DIR$/../../../target/scala-2.13/resource_managed/test" />
     <content url="file://$MODULE_DIR$/../../../target/scala-2.13/src_managed/test" />
     <orderEntry type="inheritedJdk" />

@@ -2,7 +2,7 @@ package com.example.service
 
 import io.opentelemetry.api.GlobalOpenTelemetry
 import io.opentelemetry.api.trace.{Span, StatusCode, Tracer}
-import com.example.spark.DataFrameMetrics
+import com.example.DataFrameMetrics
 
 class TracingService(tracerName: String) {
   private val tracer: Tracer = GlobalOpenTelemetry.getTracer(tracerName)

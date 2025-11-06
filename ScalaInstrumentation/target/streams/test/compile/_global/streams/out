@@ -1,0 +1,19 @@
+[error] C:\Users\arian\Development\OpenTelemetryExample\ScalaInstrumentation\src\test\scala\com\example\service\EmployeeDataServiceSpec.scala:55:23: not found: value DataFrameMetrics
+[error]         val metrics = DataFrameMetrics(rowCount = 5, columnCount = 3)
+[error]                       ^
+[error] C:\Users\arian\Development\OpenTelemetryExample\ScalaInstrumentation\src\test\scala\com\example\service\EmployeeDataServiceSpec.scala:55:40: not found: value rowCount
+[error]         val metrics = DataFrameMetrics(rowCount = 5, columnCount = 3)
+[error]                                        ^
+[error] C:\Users\arian\Development\OpenTelemetryExample\ScalaInstrumentation\src\test\scala\com\example\service\EmployeeDataServiceSpec.scala:55:54: not found: value columnCount
+[error]         val metrics = DataFrameMetrics(rowCount = 5, columnCount = 3)
+[error]                                                      ^
+[error] C:\Users\arian\Development\OpenTelemetryExample\ScalaInstrumentation\src\test\scala\com\example\service\EmployeeDataServiceSpec.scala:70:23: not found: value DataFrameMetrics
+[error]         val metrics = DataFrameMetrics(rowCount = 5, columnCount = 3)
+[error]                       ^
+[error] C:\Users\arian\Development\OpenTelemetryExample\ScalaInstrumentation\src\test\scala\com\example\service\EmployeeDataServiceSpec.scala:70:40: not found: value rowCount
+[error]         val metrics = DataFrameMetrics(rowCount = 5, columnCount = 3)
+[error]                                        ^
+[error] C:\Users\arian\Development\OpenTelemetryExample\ScalaInstrumentation\src\test\scala\com\example\service\EmployeeDataServiceSpec.scala:70:54: not found: value columnCount
+[error]         val metrics = DataFrameMetrics(rowCount = 5, columnCount = 3)
+[error]                                                      ^
+[error] 6 errors found
