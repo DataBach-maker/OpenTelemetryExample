@@ -1,2 +1,47 @@
 [debug] Created transactional ClassFileManager with tempDir = C:\Users\arian\Development\OpenTelemetryExample\ScalaInstrumentation\target\scala-2.13\classes.bak
+[debug] About to delete class files:
+[debug] 	Job$.class
+[debug] 	Main.class
+[debug] 	SparkListenerManager.class
+[debug] 	DataFrameMetrics$.class
+[debug] 	TracingService.class
+[debug] 	JobStartListener.class
+[debug] 	SparkSessionProvider$.class
+[debug] 	DataFrameMetrics.class
+[debug] 	Main$.class
+[debug] 	EmployeeDataService.class
+[debug] 	SparkSessionProvider.class
+[debug] 	EmployeeDataService$$typecreator10$1.class
+[debug] 	Job.class
+[debug] We backup class files:
+[debug] 	Job$.class
+[debug] 	Main.class
+[debug] 	SparkListenerManager.class
+[debug] 	DataFrameMetrics$.class
+[debug] 	TracingService.class
+[debug] 	JobStartListener.class
+[debug] 	SparkSessionProvider$.class
+[debug] 	DataFrameMetrics.class
+[debug] 	Main$.class
+[debug] 	EmployeeDataService.class
+[debug] 	SparkSessionProvider.class
+[debug] 	EmployeeDataService$$typecreator10$1.class
+[debug] 	Job.class
+[debug] Created transactional ClassFileManager with tempDir = C:\Users\arian\Development\OpenTelemetryExample\ScalaInstrumentation\target\scala-2.13\classes.bak
+[debug] About to delete class files:
+[debug] We backup class files:
+[debug] Registering generated classes:
+[debug] 	Job$.class
+[debug] 	Main.class
+[debug] 	SparkListenerManager.class
+[debug] 	DataFrameMetrics$.class
+[debug] 	TracingService.class
+[debug] 	JobStartListener.class
+[debug] 	SparkSessionProvider$.class
+[debug] 	DataFrameMetrics.class
+[debug] 	Main$.class
+[debug] 	EmployeeDataService.class
+[debug] 	SparkSessionProvider.class
+[debug] 	EmployeeDataService$$typecreator10$1.class
+[debug] 	Job.class
 [debug] Removing the temporary directory used for backing up class files: C:\Users\arian\Development\OpenTelemetryExample\ScalaInstrumentation\target\scala-2.13\classes.bak

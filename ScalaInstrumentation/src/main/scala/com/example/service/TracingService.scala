@@ -26,7 +26,6 @@ class TracingService(tracerName: String) {
         throw ex
     } finally {
       span.end()
-      println(s"Span '$operationName' closed")
     }
   }
 

@@ -18,7 +18,6 @@ object Job {
       val metrics = DataFrameMetrics.calculate(employeesDF)
 
       tracingService.recordMetrics(span, metrics)
-      dataService.displayResults(employeesDF, metrics)
     }
   }
 }

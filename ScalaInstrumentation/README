@@ -26,7 +26,6 @@ If you're behind a corporate firewall, you may need to configure proxy settings 
 * docker-compose logs otel-collector
 * docker-compose up
 
-
 ## Platform Compatibility
 While developed on Windows, this application should run on any platform with Docker support (Linux, macOS, Windows).
 Troubleshooting
@@ -34,3 +33,7 @@ Troubleshooting
 * Build failures: Check your internet connection and firewall settings
 * Java version issues: Ensure JDK 11 is installed and set as your default Java version
 * Docker issues on Windows: Verify WSL and Docker Desktop are properly configured
+
+## Testing
+The test specs are basic and primarily verify that the code executes without crashing. Proper testing would require mocks,
+but that's outside the scope of this implementation.

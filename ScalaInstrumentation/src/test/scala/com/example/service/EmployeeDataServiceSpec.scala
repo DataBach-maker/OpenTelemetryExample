@@ -7,8 +7,6 @@ import com.example.config.SparkSessionProvider
 import com.example.DataFrameMetrics
 import org.apache.spark.sql.{DataFrame, SparkSession}
 
-import java.io.ByteArrayOutputStream
-
 class EmployeeDataServiceSpec extends AnyWordSpec
   with Matchers
   with BeforeAndAfterAll
@@ -50,28 +48,6 @@ class EmployeeDataServiceSpec extends AnyWordSpec
         df.schema("name").dataType.typeName shouldBe "string"
         df.schema("age").dataType.typeName shouldBe "integer"
         df.schema("role").dataType.typeName shouldBe "string"
-      }
-    }
-
-    "displayResults is called" should {
-      "print the row count message" in {
-        val metrics = DataFrameMetrics(rowCount = 5, columnCount = 3)
-
-        val outCapture = new ByteArrayOutputStream()
-        Console.withOut(outCapture) {
-          service.displayResults(df, metrics)
-        }
-
-        val output = outCapture.toString
-        output should include("DataFrame created with 5 rows")
-      }
-
-      "call df.show() without errors" in {
-        val metrics = DataFrameMetrics(rowCount = 5, columnCount = 3)
-
-        noException should be thrownBy {
-          service.displayResults(df, metrics)
-        }
       }
     }
   }

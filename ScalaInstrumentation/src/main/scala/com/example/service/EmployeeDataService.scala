@@ -17,9 +17,4 @@ class EmployeeDataService(spark: SparkSession) {
 
     employeeData.toDF("name", "age", "role")
   }
-
-  def displayResults(df: DataFrame, metrics: DataFrameMetrics): Unit = {
-    println(s"DataFrame created with ${metrics.rowCount} rows")
-    df.show()
-  }
 }
